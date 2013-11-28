@@ -16,7 +16,7 @@ border, the color, etc. So by default the little window lib was
 designed to be a plain, and totally empty one, check it out.
 
 I've some anti-aliasing drawing utils that could be made as a 
-*source code* module for this little lib. I used them to monitoring 
-the experiment processes. 
+*source code* module for this little lib. I used them to monitor
+the experiment processes for many times. 
 
 /blackball
