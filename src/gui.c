@@ -329,6 +329,7 @@ _gui_winproc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) {
                         return uhit;
                 }
                 break;
+                
         case WM_PAINT:
                 if (g_wp.bmp_obj != 0) {
                         PAINTSTRUCT paint;
@@ -337,15 +338,13 @@ _gui_winproc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam) {
                         EndPaint(hwnd, &paint);
                 }
                 break;
+                
         case WM_KEYDOWN:
-                _gui_keyboard_cb(WM_KEYDOWN, wparam);
-                break;
         case WM_KEYUP:
-                _gui_keyboard_cb(WM_KEYUP, wparam);
-                break;
         case WM_CHAR:
-                _gui_keyboard_cb(WM_CHAR, wparam);
+                _gui_keyboard_cb(msg, wparam);
                 break;
+                
         default:
                 return DefWindowProc(hwnd, msg, wparam, lparam);
 
